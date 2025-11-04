@@ -1,0 +1,318 @@
+<div class="overlay" *ngIf="showOverlay" (click)="hideOverlay()" @fadeInOut>
+    <div style="text-align: center;">
+        <h1 class="fraunces" style="color: white; font-size: 3rem;"> Bienvenidos a la invitación de Alvaro y Aylin </h1>
+
+        <p class="mt-5 mb-5 p-2" style="color: white; font-size: 1.4rem;">La música de fondo es parte de la experiencia</p>
+
+        <button class="btn_ingresar" style="padding: 15px 30px; font-size: 25px;"> Ingresar </button>
+    </div>
+</div>
+
+
+
+<div class="content" [@fadeInOut]="!showOverlay ? 'in' : ''">
+
+    <!-- botón audio flotando -->
+    <div class="floating-button" (click)="toggleMute()">
+        <i [class]="isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up'"></i>
+    </div>
+    <!---->
+
+    
+
+
+    <div #hiddenButton style="position: fixed; top: -1100px;">
+
+    </div>
+
+
+    <div>
+
+        <div class="parallax">
+
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-1 col-md-1"></div>
+                <div class="col-10 col-md-10" style="text-align: center;">
+                    <img src="../../../assets/img/fecha.webp" class="w-100 mt-5">
+
+                    <img src="../../../assets/img/alvaro&aylin.webp" class="w-100 mt-3">
+                </div>
+                <div class="col-1 col-md-1"></div>
+
+
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <!-- Tiempo trs: {{formatAudioTime}}
+                    <br> Tiempo Fin. {{formatAudioEnd}} -->
+            
+                    <div class="progress position-relative" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemax="100">
+                        <div class="progress-bar" style="background-color: #2A4184;" [style.width]="(percentage) + '%'"></div>
+                        <i class="fas fa-music position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%); color: #6683db;"></i>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container">
+            <div class="row mb-3">
+                <p style="text-align: center; font-size: 48px; color: #B27E49;" class="p-2 ms-madi-regular mt-4">!Nos casamos!</p>
+
+                <p class="p-3 pt-0 maname-regular" style="text-align: center; color: #d8a66c; font-size: 24px; text-transform: uppercase;">
+                    Disfrutemos este maravilloso momento en el que decidimos compartir nuestras vidas con el sentimiento más grande que puede tenerse, el amor
+                </p>
+            </div>
+            <div class="row">
+
+                <div class="col-12 mb-5" style="text-align: center; align-items: center; justify-content: center; display: flex;">
+                    <div id="circular-frame-ct" style="justify-content: center; align-items: center;">
+                        <h1 class="faltan syne-uniquifier"> Faltan</h1>
+                        <div id="countdown-ct">
+                            <div class="time-unit-ct">
+                                <div id="days" class="value-ct syne-uniquifier">{{ days }}</div>
+                                <div class="label-ct">DIAS</div>
+                            </div>
+                            <div class="time-unit-ct">
+                                <div id="hours" class="value-ct syne-uniquifier">{{ hours }}</div>
+                                <div class="label-ct">HS</div>
+                            </div>
+                            <div class="time-unit-ct">
+                                <div id="minutes" class="value-ct syne-uniquifier">{{ minutes }}</div>
+                                <div class="label-ct">MIN</div>
+                            </div>
+                            <div class="time-unit-ct">
+                                <div id="seconds" class="value-ct syne-uniquifier">{{ seconds }}</div>
+                                <div class="label-ct">SEG</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ 
+            </div>
+
+        </div>
+
+        <!-- Imagen fija que se muestra con AOS -->
+        <div class="fixed-image-container-1" data-aos="fade-left">
+            <img src="../../../assets/img/flor-izq.png" class="fixed-image">
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 mb-5">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-12 mt-4" style="text-align: center;" data-aos="fade-up">
+                                <img src="../../../assets/img/titulo-ceremonia.webp" style="width: 80%;">
+                            </div>
+            
+                            <div class="col-12" style="text-align: center;">
+            
+                                <lord-icon src="../../../assets/json/anillo.json" trigger="loop" stroke="light" colors="primary:#3D518B,secondary:#3D518B" style="width:150px;height:150px" data-aos="fade-up">
+                                </lord-icon>
+                                
+                            </div>
+                            <div class="col-12 mt-3">
+                                <p class="p-2 font-sans pt-4" style="text-align: center; color: #2A4184; font-size: 25px; font-weight: bold; margin-bottom: 0;">
+                                    DÍA
+                                </p>
+            
+                                <p class="p-2 font-sans pt-0 mb-5" style="text-align: center; color: #d8a66c; font-size: 22px;">
+                                    Sábado 07 de Setiembre 4PM
+                                </p>
+            
+            
+            
+                                <p class="p-2 font-sans mt-5" style="text-align: center; color: #2A4184; font-size: 25px; font-weight: bold; margin-bottom: 0;">
+                                    LUGAR
+                                </p>
+                                <p class="p-2 font-sans pt-0" style="text-align: center; color: #d8a66c; font-size: 22px;">
+                                    Hacienda Casa Blanca, camino viejo a Jesús del Valle Lote 20 - Huaral
+                                </p>
+            
+                                <div style="display: flex; justify-content: center;" class="mt-5">
+                                    <a style="cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; color: white; background-color: #2A4184; border: 1px solid #2A4184; padding: 5px 32px; padding-bottom: 5px; border-radius: 15px; font-size: 20px;"
+                                    target="_blank" href="https://maps.app.goo.gl/ucxu6fFpt9bTf6Mp7"> Ver ubicación 
+                                    <lord-icon
+                                        src="../../../assets/json/ubicacion-blanco-bold.json"
+                                        trigger="loop"
+                                        stroke="bold"
+                                        state="hover-pinch"
+                                        style="width:30px;height:30px; margin-left: 10px; margin-bottom: 4px;">
+                                    </lord-icon>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5 mt-3" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-4" style="text-align: center;">
+
+                                <img src="../../../assets/img/titulo-celebracion.webp" style="width: 80%;">
+                                
+                                <lord-icon src="../../../assets/json/celebracion.json" trigger="loop" stroke="light" state="hover-pinch" style="width:150px;height:150px;">
+                                </lord-icon>
+                            </div>
+                            <div class="col-12">
+                                <p class="p-2 mt-3 mb-5 maname-regular" style="text-align: center; color: #d8a66c; font-size: 22px; text-transform: uppercase;">
+                                    Vestimenta <b>Elegante</b>
+                                    <br>
+                                    <br> Evita utilizar el color blanco, será exclusivo para la novia. !Esperamos verte brillar con tu estilo único!
+                                </p>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card" style="background-color: #E4C4A1; border: none; text-align: center;">
+                                    <h5 class="mt-4 mb-2" style="text-align: center; color: white; font-size: 24px;"> MÚSICA </h5>
+            
+                                    <div style="text-align: center;">
+                                        <lord-icon src="../../../assets/json/music.json" trigger="loop" stroke="light" state="hover-pinch" style="width:250px;height:250px">
+                                        </lord-icon>
+                                    </div>
+            
+                                    <div class="card-body">
+                                        <p class="card-text mt-1 mb-4 font-sans" style="color: white; font-weight: 500; text-align: center; font-size: 1.2rem;"> ¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+                                        <div style="text-align: center;" class="mb-3">
+            
+                                            <a (click)="showCancionesForm()" style="text-decoration: none; display: flex; align-items: center; justify-content: center; color: #C8A783; background-color: white; border: 1px solid white; padding-top: 0px; padding-bottom: 1px; border-radius: 15px; font-size: 18px; cursor: pointer;"> Sugerir canciones aquí
+                                        <lord-icon
+                                            src="../../../assets/json/seleccionar.json"
+                                            trigger="loop"
+                                            state="hover-pinch"
+                                            style="width:30px;height:30px; margin-left: 10px; margin-bottom: 10px;">
+                                        </lord-icon>
+                                    </a>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5" data-aos="fade-up">
+                    <div class="container">
+                        <div class="row">
+                            <div style="text-align: center;" class="">
+                                <lord-icon src="../../../assets/json/regalo.json" trigger="loop" stroke="light" state="hover-pinch" style="width:150px;height:150px">
+                                </lord-icon>
+                            </div>
+            
+                            <p style="text-align: center; color: #2A4184; font-size: 22px; margin-bottom: 0" class="p-3 font-sans">
+                                Lo más importante para nosotros es qué puedas celebrar nuestro día. Si deseas tener un detalle con un regalo físico puedes hacerlo el día de la boda o a través de:
+                            </p>
+                            <p style="text-align: center; color: #2A4184; font-size: 22px; margin-bottom: 0; padding-top: 0 !important; padding-bottom: 0px !important;" class="p-2 font-sans"> <b> BCP </b> Alvaro Mena Santos </p>
+                            <p style="text-align: center; color: #2A4184; font-size: 22px; margin-bottom: 0; padding-top: 0 !important; padding-bottom: 0px !important;" class="p-2 font-sans"> Cuenta: 37035510967015 </p>
+                            <p style="text-align: center; color: #2A4184; font-size: 22px; margin-bottom: 0; padding-top: 0 !important; padding-bottom: 0px !important;" class="p-2 font-sans"> CCI Interbancaria: 00237013551096701555 </p>
+                            <p style="text-align: center; color: #2A4184; font-size: 22px; margin-bottom: 0; padding-top: 0 !important; padding-bottom: 0px !important;" class="p-2 font-sans"> <b>YAPE</b> : 926 353 561 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen fija que se muestra con AOS -->
+        <div class="fixed-image-container-2" data-aos="fade-left">
+            <img src="../../../assets/img/flor-izq.png" class="fixed-image">
+        </div>
+       
+        <div class="container" data-aos="fade-up">
+            <div class="row mt-5 mb-4 p-2">
+                <div style="text-align: center;">
+                    <lord-icon src="../../../assets/json/document.json" trigger="loop" stroke="light" style="width:150px;height:150px">
+                    </lord-icon>
+                </div>
+                <p style="text-align: center; font-size: 48px; color: #B27E49;" class="p-2 ms-madi-regular">Asistencia</p>
+
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="idNombre" class="form-label syne-uniquifier" style="color: #2A4184; font-size: 20px;"> Nombre del invitado </label>
+                        <input [(ngModel)]="_inputNombre" type="text" class="form-control" placeholder="Ingrese su nombre completo" autocomplete="off" maxlength="40" (keypress)="validateNombre($event)">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="idCelular" class="form-label syne-uniquifier" style="color: #2A4184; font-size: 20px;"> Celular </label>
+                        <input [(ngModel)]="_inputCelular" type="text" class="form-control" id="idCelular" placeholder="Ingrese su celular" (keypress)="validateNumber($event)" maxlength="10" autocomplete="off" inputmode="numeric"
+                        pattern="[0-9]*">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="idConfirmacion" class="form-label syne-uniquifier" style="color: #2A4184; font-size: 20px;"> Confirmación </label>
+                        <select [(ngModel)]="_inputAsistencia" id="idConfirmacion" class="form-select">
+                            <option value="">--Seleccione--</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="idMensaje" class="form-label syne-uniquifier" style="color: #2A4184; font-size: 20px;"> Mensaje para los novios </label>
+                        <textarea [(ngModel)]="_inputMensaje" name="" id="idMensaje" rows="10" style="resize: none; height: 200px; width: 100%;" class="form-control" autocomplete="off" maxlength="150">
+
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="col-7"></div>
+                <div class="col-5">
+                    <button class="btn btn-primary float-end syne-uniquifier" style="background-color: #2A4184; border: none; cursor: pointer;" (click)="confirmar()">
+                        Enviar <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen fija que se muestra con AOS -->
+        <div class="fixed-image-container-3" data-aos="fade-left">
+            <img src="../../../assets/img/flor-izq.png" class="fixed-image">
+        </div>
+
+        <div class="container">
+            <div class="row mt-4 mb-4">
+                <p style="text-align: center; font-size: 48px; color: #B27E49;" class="p-2 ms-madi-regular">!Te esperamos!</p>
+            </div>
+            <div class="row p-0 m-0">
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+            </div>
+        </div>
+
+        <div class=" mt-4 mb-4" style="background-color: #2A4184;">
+            <footer>
+                <p style="text-align: center; margin-bottom: 0; color: white; font-size: 18px;" class="p-3 mt-2 mb-2 font-sans"> Desarrollado con ❤️ por <a href="https://pe.linkedin.com/in/alvaro-mena-santos" target="_blank" style="color: white; cursor: pointer;"> Alvaro Mena </a> </p>
+            </footer>
+        </div>
+
+
+
+
+    </div>
+
+</div>
